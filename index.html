@@ -1,74 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/master.css">
+  </head>
+  <body>
+    <header>
 
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <div class="bg-head">
+        <div class="bg-bg">
+          <img id ="ts3-l"src="https://www.teamspeak.com/user/themes/teamspeak/images/TeamSpeakSmirk-white.svg" width="100px"/>
+          <img id ="dis-l"src="https://discord.com/assets/192cb9459cbc0f9e73e2591b700f1857.svg" width="100px"/>
+        </div>
+        <h1 id="bg-head-text">weristonline?</h1>
+      </div>
+    </header>
+    <main>
+      <div class="ts">
+        <div id="ts3viewer_1117646"> </div>
+        <script src="https://static.tsviewer.com/short_expire/js/ts3viewer_loader.js"></script>
+        <script> var ts3v_url_1 = "https://www.tsviewer.com/ts3viewer.php?ID=1117646&text=ffffff&text_size=12&text_family=1&text_s_color=ffffff&text_s_weight=normal&text_s_style=normal&text_s_variant=normal&text_s_decoration=none&text_i_color=&text_i_weight=normal&text_i_style=normal&text_i_variant=normal&text_i_decoration=none&text_c_color=&text_c_weight=normal&text_c_style=normal&text_c_variant=normal&text_c_decoration=none&text_u_color=ffffff&text_u_weight=normal&text_u_style=normal&text_u_variant=normal&text_u_decoration=none&text_s_color_h=&text_s_weight_h=bold&text_s_style_h=normal&text_s_variant_h=normal&text_s_decoration_h=none&text_i_color_h=fff000&text_i_weight_h=bold&text_i_style_h=normal&text_i_variant_h=normal&text_i_decoration_h=none&text_c_color_h=&text_c_weight_h=normal&text_c_style_h=normal&text_c_variant_h=normal&text_c_decoration_h=none&text_u_color_h=&text_u_weight_h=bold&text_u_style_h=normal&text_u_variant_h=normal&text_u_decoration_h=none&hideEmptyChannels&iconset=default_mono_2014";
+        ts3v_display.init(ts3v_url_1, 1117646, 100);
+        </script>
+      </div>
+      <div class="discord">
+        <iframe src="https://discordapp.com/widget?id=272801606364561409&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
 
-  <style>
+      </div>
+    </main>
 
-
-
-  #right{
-    position:absolute;
-    float:right;
-    top:0px;
-    right: 0px;
-  }
-
-  #left{
-    position:absolute;
-      background-color: grey;
-      width:260px;
-      padding:10px;
-      border-radius: 5px;
-      left: 5%
-      top: 650px;
+    <script type="text/javascript">
+    let col1 = "rgb("
+    for (i=0;i<6;i++){
+      if(i == 3){
+        col1 = col1.concat(")")
+        document.querySelector("#bg-head-text").style.color = col1.toString();
+        console.log(col1)
+        col1 = "rgb("
+      }
+      col1 = col1.concat((Math.random()*255).toFixed().toString())
+      if(i<2){
+        col1 = col1.concat(",")
+      }
+      if(i>2&&i<5){
+        col1 = col1.concat(",")
+      }
+      if(i == 5){
+        col1 = col1.concat(")")
+          document.querySelector(".bg-head").style.backgroundColor = col1.toString();
+          console.log(col1)
+        }
     }
-    @media only screen and (min-width: 500px) {
-
-  #left{
-    position:absolute;
-      background-color: grey;
-      width:260px;
-      padding:10px;
-      border-radius: 5px;
-      left: 5%
-    }
-  #right{
-    position:absolute;
-    float:right;
-    top:0px;
-    right: 0px;
-  }
-}
-@media only screen and (max-width: 650px){
-  
-  #left{
-
-    top:650px;
-	width:600px;
-  }
-  #right{
-    left: 5%;
-  }
-}
-
-  </style>
-</head>
-<body>
-  <div id="left">
-<h1>TS3 Server</h1>
-<!--<script type="text/javascript" src="https://view.light-speed.com/teamspeak3.php?IP=188.68.41.52&PORT=9987&QUERY=10011&UID=263231&display=block&font=11px&background=transparent&server_info_background=transparent&server_info_text=%23ffffff&server_name_background=transparent&server_name_text=%23ffffff&info_background=transparent&channel_background=transparent&channel_text=%23ffffff&username_background=transparent&username_text=%23ffffff"></script>-->
-<div id="ts3viewer_1117646" style="width:250px; "> </div>
-
-<script src="https://static.tsviewer.com/short_expire/js/ts3viewer_loader.js"></script>
-<script>
-var ts3v_url_1 = "https://www.tsviewer.com/ts3viewer.php?ID=1117646&text=000000&text_size=12&text_family=1&text_s_color=000000&text_s_weight=normal&text_s_style=normal&text_s_variant=normal&text_s_decoration=none&text_i_color=&text_i_weight=normal&text_i_style=normal&text_i_variant=normal&text_i_decoration=none&text_c_color=&text_c_weight=normal&text_c_style=normal&text_c_variant=normal&text_c_decoration=none&text_u_color=000000&text_u_weight=normal&text_u_style=normal&text_u_variant=normal&text_u_decoration=none&text_s_color_h=&text_s_weight_h=bold&text_s_style_h=normal&text_s_variant_h=normal&text_s_decoration_h=none&text_i_color_h=000000&text_i_weight_h=bold&text_i_style_h=normal&text_i_variant_h=normal&text_i_decoration_h=none&text_c_color_h=&text_c_weight_h=normal&text_c_style_h=normal&text_c_variant_h=normal&text_c_decoration_h=none&text_u_color_h=&text_u_weight_h=bold&text_u_style_h=normal&text_u_variant_h=normal&text_u_decoration_h=none&hideEmptyChannels&iconset=default_mono_2014";
-ts3v_display.init(ts3v_url_1, 1117646, 100);
-</script>
-</div>
-<div id="right">
-<h1>Discord Server</h1>
-<iframe src="https://discordapp.com/widget?id=272801606364561409&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
-</div>
-</body>
+    </script>
+  </body>
 </html>
