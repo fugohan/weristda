@@ -19,6 +19,7 @@ header{
   top:-20px;
   width: 110%;
   left:-5%;
+  z-index: 100;
 }
 .bg-head{
 
@@ -56,10 +57,23 @@ main{
   top: 200px;
   color:white
 }
-.ts{position: fixed;width: 50%;left: 0;margin:auto;}
+.ts{position: absolute;;width: 50%;left: 0;margin:auto;}
 #ts3viewer_1117646{
   width: 90%;
 margin:auto;
 margin-top: 50px;
 }
-.discord{position: fixed;width: 350px;right: calc(20% - 125px);margin: auto;margin-top: 50px;/*margin-right: calc(350px - 350px / 2);*/}
+.discord{position: absolute;width: 350px;right: calc(20% - 125px);margin: auto;margin-top: 50px;/*margin-right: calc(350px - 350px / 2);*/}
+
+
+@media only screen and (max-width: 750px) {
+  .ts{
+    /* display: none; */
+    top: 600px;
+    width: 100%;
+  }
+  .discord{
+    left:calc(50% - 175px);
+    right: auto;
+  }
+}
